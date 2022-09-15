@@ -13,7 +13,7 @@ import {
   NavItemBtn,
   Button,
 } from "./Navbart.style";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
@@ -22,6 +22,20 @@ export default function Navbar() {
   const [button, setButton] = useState(true);
   const closeMobileMenu = () => setClick(false);
   const handleClick = () => setClick(!click);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
 
   return (
     <>

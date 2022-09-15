@@ -53,7 +53,8 @@ export const NavMenu = styled.ul`
     top: 80px;
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
+    //ตัวควบคุมให้ เวลา slide ให้เห้น ไม่งั้น จะเห็นเหมือนกระพริบ
     background: #101522;
     /* background: red; */
   }
