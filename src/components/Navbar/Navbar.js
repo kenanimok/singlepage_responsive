@@ -6,6 +6,12 @@ import {
   NavIcon,
   MobileIcon,
   Nav,
+  NavMenu,
+  NavItem,
+  NavLinks,
+  NavBtnLink,
+  NavItemBtn,
+  Button,
 } from "./Navbart.style";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -29,6 +35,37 @@ export default function Navbar() {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
+
+            <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
+                <NavLinks to="/" onClick={closeMobileMenu}>
+                  Home
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/services" onClick={closeMobileMenu}>
+                  Services
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/products" onClick={closeMobileMenu}>
+                  Products
+                </NavLinks>
+              </NavItem>
+              <NavItemBtn>
+                {button ? (
+                  <NavBtnLink to="/sign-up">
+                    <Button primary>SIGN UP</Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink to="/sign-up">
+                    <Button onClick={closeMobileMenu} fontBig primary>
+                      SIGN UP
+                    </Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn>
+            </NavMenu>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
