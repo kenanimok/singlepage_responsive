@@ -21,7 +21,6 @@ export const Container = styled.div`
   @media screen and (max-width: 991px) {
     padding-right: 30px;
     padding-left: 30px;
-    /* background-color: red; */
   }
 `;
 

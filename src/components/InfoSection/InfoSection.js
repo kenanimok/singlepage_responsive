@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Button } from "../../globalStyles";
-import Navbar from "../Navbar/Navbar";
 import {
   InfoSec,
   InfoRow,
@@ -31,7 +30,7 @@ function InfoSection({
 }) {
   return (
     <>
-      {/* <InfoSec lightBg={lightBg}>
+      <InfoSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
@@ -53,16 +52,7 @@ function InfoSection({
             </InfoColumn>
           </InfoRow>
         </Container>
-      </InfoSec> */}
-
-      <Navbar></Navbar>
-      <Navbar></Navbar>
-
-      <Navbar></Navbar>
-
-      <Navbar></Navbar>
-
-      <Navbar></Navbar>
+      </InfoSec>
     </>
   );
 }
