@@ -5,6 +5,9 @@ import GlobalStyle from "./globalStyles";
 import Home from "./pages/HomePage/Home";
 import Service from "./pages/Service/Service";
 import Footer from "./components/Footer/Footer";
+import Products from "./pages/Products/Proucuts";
+import SignUp from "./pages/Signup/Sigup";
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </BrowserRouter>
